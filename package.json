@@ -1,0 +1,19 @@
+{
+  "name": "not-it",
+  "version": "0.0.0",
+  "description": "Not quite the it() you are used to.",
+  "main": "lib/notIt.js",
+  "dependencies": {
+    "bluebird": "3.4.7"
+  },
+  "devDependencies": {
+    "got": "6.7.1",
+    "httpception": "alexjeffburke/httpception#not-it",
+    "mocha": "3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Alex J Burke",
+  "license": "BSD-3-Clause"
+}
