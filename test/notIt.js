@@ -116,4 +116,21 @@ describe('not-it', function () {
                 });
         });
     });
+
+    describe('when nested within an it', function () {
+        it('should perform the right HTTP request', notIt(() => {
+            httpception({
+                request: 'GET /foobar',
+                response: {
+                    statusCode: 200,
+                    body: 'the text'
+                }
+            });
+
+            return got('example.com/foobar')
+                .then(response => {
+                    assert.equal(response.body, 'the text');
+                });
+        }));
+    });
 });
